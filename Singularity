@@ -8,9 +8,6 @@ From: bvlc/caffe:cpu
 	#Use bash as default shell
 	SHELL=/bin/bash
 
-	#Add nvidia driver paths
-	PATH="/nvbin:$PATH"
-	LD_LIBRARY_PATH="/nvlib;$LD_LIBRARY_PATH"
 
 	#Add CUDA paths
 	CPATH="/usr/local/cuda/include:$CPATH"
@@ -19,10 +16,10 @@ From: bvlc/caffe:cpu
 	CUDA_HOME="/usr/local/cuda"
 
 	#Add Caffe paths
-  CAFFE_ROOT="/opt/caffe"
-  PYCAFFE_ROOT="$CAFFE_ROOT/python"
-  PYTHONPATH="$PYCAFFE_ROOT:$PYTHONPATH"
-  PATH="$CAFFE_ROOT/build/tools:$PYCAFFE_ROOT:$PATH"
+	CAFFE_ROOT="/opt/caffe"
+	PYCAFFE_ROOT="$CAFFE_ROOT/python"
+	PYTHONPATH="$PYCAFFE_ROOT:$PYTHONPATH"
+	PATH="$CAFFE_ROOT/build/tools:$PYCAFFE_ROOT:$PATH"
 
 	export PATH LD_LIBRARY_PATH CPATH CUDA_HOME CAFFE_ROOT PYCAFFE_ROOT PYTHONPATH
 
@@ -40,8 +37,6 @@ From: bvlc/caffe:cpu
 	#Default mount paths
 	mkdir /scratch /data /shared /fastdata
 
-	#Nvidia Library mount paths
-	mkdir /nvlib /nvbin
 
 
 %runscript
