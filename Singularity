@@ -38,15 +38,16 @@ From: bvlc/caffe:cpu
 	mkdir /scratch /data /shared /fastdata
 
 	# Update list of packages and install packages for ease of use.
-	apt-get update 
+	apt-get update
+	apt-get install - y apt-utils
 	apt-get install -y vim
 	apt-get install -y tmux screen
 	apt-get install -y xterm
-
+	
 	# Install for tkinter
 	apt-get install -y python-tk
 	#Instal dependencies for caffe
-	apt-get install libxcb-xfixes0-dev
+	apt-get install -y libxcb-xfixes0-dev
 
 	# OpenCV from pip, including contrib.  This makes the install MUCH faster.
 	# See https://pypi.python.org/pypi/opencv-contrib-python for capabilities 
