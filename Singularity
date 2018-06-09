@@ -45,6 +45,8 @@ From: bvlc/caffe:cpu
 
 	# Install for tkinter
 	apt-get install -y python-tk
+	#Instal dependencies for caffe
+	apt-get install libxcb-xfixes0-dev
 
 	# OpenCV from pip, including contrib.  This makes the install MUCH faster.
 	# See https://pypi.python.org/pypi/opencv-contrib-python for capabilities 
