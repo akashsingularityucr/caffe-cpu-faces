@@ -37,6 +37,24 @@ From: bvlc/caffe:cpu
 	#Default mount paths
 	mkdir /scratch /data /shared /fastdata
 
+	# Update list of packages and install packages for ease of use.
+	apt-get update 
+	apt-get install -y vim
+	apt-get install -y tmux screen
+	apt-get install -y xterm
+
+	# Install for tkinter
+	apt-get install -y python-tk
+
+	# OpenCV from pip, including contrib.  This makes the install MUCH faster.
+	# See https://pypi.python.org/pypi/opencv-contrib-python for capabilities 
+	# and limitations.  
+	pip install --no-cache-dir opencv-contrib-python
+
+	# Installing imutils,dlib,progressbar for FACES projectt
+	pip install --no-cache-dir imutils
+	pip install --no-cache-dir dlib
+	pip install progressbar2
 
 
 %runscript
