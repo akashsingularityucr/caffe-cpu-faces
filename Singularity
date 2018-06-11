@@ -54,10 +54,11 @@ From: bvlc/caffe:cpu
 	# and limitations.  
 	pip install --no-cache-dir opencv-contrib-python
 
-	# Installing imutils,dlib,progressbar for FACES projectt
+	# Installing imutils,dlib,progressbar for FACES project
 	pip install --no-cache-dir imutils
 	pip install --no-cache-dir dlib
 	pip install progressbar2
+	pip install Flask-Cors
 
 
 %runscript
