@@ -57,8 +57,9 @@ From: bvlc/caffe:cpu
 	# Installing imutils,dlib,progressbar for FACES project
 	pip install --no-cache-dir imutils
 	pip install --no-cache-dir dlib
-	pip install progressbar2
-	pip install Flask-Cors
+	pip install --no-cache-dir progressbar2
+	pip install --no-cache-dir flask
+	pip install --no-cache-dir flask_cors
 
 
 %runscript
